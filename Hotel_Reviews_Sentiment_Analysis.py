@@ -8,3 +8,4 @@ data = pd.read_csv("hotel_reviews.csv")
 print(data.head())
 
 
+
