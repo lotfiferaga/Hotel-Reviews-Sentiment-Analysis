@@ -22,3 +22,9 @@ fig.gca().add_artist(central_circle)
 plt.rc('font', size=12)
 plt.title("Hotel Reviews Ratings", fontsize=20)
 plt.show()
+
+sentiments = SentimentIntensityAnalyzer()
+data["Positive"] = [sentiments.polarity_scores(i)["pos"] for i in data["Review"]]
+data["Negative"] = [sentiments.polarity_scores(i)["neg"] for i in data["Review"]]
+data["Neutral"] = [sentiments.polarity_scores(i)["neu"] for i in data["Review"]]
+print(data.head())
