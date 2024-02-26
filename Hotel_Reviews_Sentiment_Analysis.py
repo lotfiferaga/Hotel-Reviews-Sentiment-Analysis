@@ -41,3 +41,7 @@ data["Positive"] = [sentiments.polarity_scores(i)["pos"] for i in data["Review"]
 data["Negative"] = [sentiments.polarity_scores(i)["neg"] for i in data["Review"]]
 data["Neutral"] = [sentiments.polarity_scores(i)["neu"] for i in data["Review"]]
 print(data.head())
+
+print("Positive: ", x)
+print("Negative: ", y)
+print("Neutral: ", z)
